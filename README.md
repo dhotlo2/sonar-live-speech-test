@@ -11,3 +11,4 @@ Phrases that currently lead to commands (say one of these):
 - open use cases page
 - open Salesforce integration page
 - open compliance page
+- open account settings

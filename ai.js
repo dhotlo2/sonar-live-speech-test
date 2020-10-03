@@ -30,6 +30,11 @@ window.setInterval(function(){
 		document.getElementById('result').innerHTML.indexOf('open compliance page') != -1){
   		openC();
 	}
+
+	if (
+		document.getElementById('result').innerHTML.indexOf('open account settings') != -1){
+  		openAccount();
+	}
 }, 500);
 
 function closeUsecases() {
@@ -88,6 +93,17 @@ var openC = (function() {
         if (!executed) {
             executed = true;
             var win = window.open('https://www.sendsonar.com/compliance.html', '_blank');
+			 win.focus();
+        }
+    };
+})();
+
+var openAccount = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            var win = window.open('https://staging-dashboard.sendsonar.com/?modal=AccountSettings', '_blank');
 			 win.focus();
         }
     };
