@@ -12,3 +12,4 @@ Phrases that currently lead to commands (say one of these):
 - open Salesforce integration page
 - open compliance page
 - open account settings
+- how do I send a campaign
