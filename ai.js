@@ -45,6 +45,11 @@ window.setInterval(function(){
 		document.getElementById('result').innerHTML.indexOf('check my calendar') != -1){
   		openCalendar();
 	}
+
+	if (
+		document.getElementById('result').innerHTML.indexOf('send an email to Rebecca') != -1){
+  		openEmail();
+	}
 }, 500);
 
 function closeUsecases() {
@@ -136,6 +141,17 @@ var openCalendar = (function() {
         if (!executed) {
             executed = true;
             var win = window.open('https://calendar.google.com/calendar/u/3/r?tab=cc', '_blank');
+			 win.focus();
+        }
+    };
+})();
+
+var openEmail = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            var win = window.open('https://mail.google.com/mail/u/3/?tab=wm&ogbl#inbox?compose=GTvVlcSBnpwckdjtvWJNvGsdfXhTGssdjpnkBxWPRdLQWScXJJTftlmBMtRqZHGPvzCFCKlvKkVKh', '_blank');
 			 win.focus();
         }
     };
