@@ -49,6 +49,7 @@ h3 {
 .live {
 	margin: 10px;
 	background: #4E4D4B;
+  opacity: 0.95;
 	color: white;
 	border-radius: 10px;
 	max-height: 200px;

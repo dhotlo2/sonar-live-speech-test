@@ -35,6 +35,11 @@ window.setInterval(function(){
 		document.getElementById('result').innerHTML.indexOf('open account settings') != -1){
   		openAccount();
 	}
+
+	if (
+		document.getElementById('result').innerHTML.indexOf('how do I send a campaign') != -1){
+  		openCampaign();
+	}
 }, 500);
 
 function closeUsecases() {
@@ -104,6 +109,17 @@ var openAccount = (function() {
         if (!executed) {
             executed = true;
             var win = window.open('https://staging-dashboard.sendsonar.com/?modal=AccountSettings', '_blank');
+			 win.focus();
+        }
+    };
+})();
+
+var openCampaign = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            var win = window.open('https://docs.sendsonar.com/docs/campaigns', '_blank');
 			 win.focus();
         }
     };
