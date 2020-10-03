@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	font-family: roboto, san-serif;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+}
+a {
+	color: #23C6A3;
+	text-decoration: underline;
+}
+
+.wrapper {
+	background-image: url(bg.PNG);
+	background-size: cover;
+	height: 100%;
+}
+
+.notification {
+	display: none;
+	background: #4E4D4B;
+	padding: 15px;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	right: 0px;
+	margin: 10px;
+	transition: 0.3s;
+	background-image: url(blur.png);
+	background-size: 60px;
+	background-position: 90%;
+	background-repeat: no-repeat;
+}
+
+#usecases {
+	display: none;
+}
+
+.live {
+	margin: 10px;
+	background: #4E4D4B;
+	color: white;
+	border-radius: 10px;
+	max-height: 200px;
+}
+
+#livecall {
+	display: none;
+}
+
+#result {
+	max-height: 95px;
+  overflow: auto;
+  padding: 0 5px;
+  padding: 7px 0 !important;
+}
+
+#result::-webkit-scrollbar {
+  display: none;
+}
+
+#result p {
+	line-height: 25px;
+}
+
+#result p:not(.final) {
+	display: inline;
+}
+
+.callbtn {
+	background-image: url(phone.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 15px;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+    left: 558px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.btnholder {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#recording {
+  display: none;
+}
+
+#transcription {
+  display: none;
+  padding: 0 5px;
+  background: #4E4D4B;
+  position: absolute;
+  font-size: 10px;
+  color: grey;
+  left: 126px;
+  top: 94px;
+}
+
+/*SPEECH STUFF*/
+.holder {
+	position: absolute;
+	right: 0;
+	width: 350px;
+}
+
+header {
+  border-bottom: 1px solid #0d122b;
+  margin-bottom: 2em;
+}
+main {
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 2em;
+  padding-top: 4em;
+  text-align: center;
+}
+@keyframes bg-pulse {
+  0% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: #c7ecee;
+  }
+
+  100% {
+    backgrouond-color: #fff;
+  }
+}
+main.speaking {
+  animation: bg-pulse 1.5s alternate ease-in-out infinite;
+}
+#result {
+  color: #9e9e9e;
+  text-align: center;
+  padding-bottom: 5px;
+}
+#result .final {
+  color: white;
+  font-style: normal;
+}
+button {
+  font-size: 18px;
+  font-weight: 200;
+  padding: 1em;
+  width: 40px;
+  background: transparent;
+  background-image: url(phonegreen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #20c186;
+  border-radius: 45px;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  color: #20c186;
+  margin: 25px;
+}
+button:hover,
+button:focus {
+  outline: none;
+}
+
+.error {
+  color: #f22f46;
+  text-align: center;
+}
+footer {
+  border-top: 1px solid #0d122b;
+  text-align: center;
+}

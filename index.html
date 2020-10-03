@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	</title>
+
+	<link rel="stylesheet" href="styles.css">
+	<script src="ai.js"></script>
+	<script src="speech.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="callbtn" onclick="showLive()">
+			
+		</div>
+		<div class="holder">
+			<div class="live" id="livecall">
+				<div class="btnholder">
+					<button id="button"></button>
+					<div class="">
+						<h3>Rebecca Yang</h3>
+						<p id="voip">Using: VOIP</p>
+						<div id="recording">0:00:</div>
+					</div>
+				</div>
+				<div id="transcription">LIVE TRANSCRIPTION</div>
+				<div id="result"></div>
+			</div>
+			<div class="notification" id="usecases" onclick="closeUsecases()">
+				<h3>Suggestion</h3>
+				<a href="https://www.sendsonar.com/use-cases.html" target=_blank>Use cases page</a>
+			</div>
+			<div class="notification" id="salesforce" onclick="closeSalesforce()">
+				<h3>Suggestion</h3>
+				<a href="https://www.sendsonar.com/salesforce.html" target=_blank>Salesforce Integration</a>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
