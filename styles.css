@@ -11,11 +11,18 @@ a {
 	color: #23C6A3;
 	text-decoration: underline;
 }
+h3 {
+  font-size: 16px;
+}
 
 .wrapper {
 	background-image: url(bg.png);
 	background-size: cover;
 	height: 100%;
+}
+
+#voip {
+  color: #afaeae;
 }
 
 .notification {

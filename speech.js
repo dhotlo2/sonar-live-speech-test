@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const stop = () => {
       recognition.stop();
       button.style.border = "2px solid #20c186";
+      button.style.backgroundImage = 'url(phonegreen.svg)'
       v.style.display = 'block';
       rec.style.display = 'none';
     };
@@ -24,6 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
       trans.style.display = 'block';
       recognition.start();
       button.style.border = "2px solid #f22f46";
+      button.style.backgroundImage = 'url(phonered.svg)'
       v.style.display = 'none';
       rec.style.display = 'block';
       
