@@ -40,6 +40,11 @@ window.setInterval(function(){
 		document.getElementById('result').innerHTML.indexOf('how do I send a campaign') != -1){
   		openCampaign();
 	}
+
+	if (
+		document.getElementById('result').innerHTML.indexOf('check my calendar') != -1){
+  		openCalendar();
+	}
 }, 500);
 
 function closeUsecases() {
@@ -120,6 +125,17 @@ var openCampaign = (function() {
         if (!executed) {
             executed = true;
             var win = window.open('https://docs.sendsonar.com/docs/campaigns', '_blank');
+			 win.focus();
+        }
+    };
+})();
+
+var openCalendar = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            var win = window.open('https://calendar.google.com/calendar/u/3/r?tab=cc', '_blank');
 			 win.focus();
         }
     };

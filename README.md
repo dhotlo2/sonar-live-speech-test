@@ -13,3 +13,4 @@ Phrases that currently lead to commands (say one of these):
 - open compliance page
 - open account settings
 - how do I send a campaign
+- check my calendar
