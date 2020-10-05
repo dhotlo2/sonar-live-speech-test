@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const wave = document.getElementById("wave");
   const button = document.getElementById("button");
   const result = document.getElementById("result");
   const v = document.getElementById("voip");
@@ -16,6 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
       button.style.backgroundImage = 'url(phonegreen.svg)'
       v.style.display = 'block';
       rec.style.display = 'none';
+      wave.style.display = 'none';
     };
 
     const start = () => {
@@ -28,6 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
       button.style.backgroundImage = 'url(phonered.svg)'
       v.style.display = 'none';
       rec.style.display = 'block';
+      wave.style.display = 'flex';
       
       // Counter for call time
       var sec = 0;
