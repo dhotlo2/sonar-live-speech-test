@@ -19,6 +19,7 @@ h3 {
 	background-image: url(bg.png);
 	background-size: cover;
 	height: 100%;
+  max-width: 1440px;
 }
 
 #voip {
