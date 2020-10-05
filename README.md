@@ -15,3 +15,4 @@ Phrases that currently lead to commands (say one of these):
 - how do I send a campaign
 - check my calendar
 - send an email to Rebecca
+- show me the weather
