@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const v = document.getElementById("voip");
   const rec = document.getElementById("recording");
   const trans = document.getElementById("transcription");
+  const callbtn = document.getElementById("customerCallButton");
   let listening = false;
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -18,6 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
       v.style.display = 'block';
       rec.style.display = 'none';
       wave.style.display = 'none';
+      callbtn.style.filter = 'none';
     };
 
     const start = () => {
@@ -31,6 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
       v.style.display = 'none';
       rec.style.display = 'block';
       wave.style.display = 'flex';
+      callbtn.style.filter = 'grayscale(1)';
       
       // Counter for call time
       var sec = 0;
