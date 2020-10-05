@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+}
+
 * {
 	margin: 0;
-	font-family: roboto, san-serif;
+	font-family: "Roboto";
+  font-weight: 400;
 }
 
 body {
