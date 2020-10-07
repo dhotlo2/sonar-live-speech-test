@@ -12,13 +12,24 @@
 <body>
 	<div class="wrapper">
 		<div class="callbtn" id="customerCallButton" onclick="showLive()"></div>
-		<div class="popup" id="kitchen">
+		<div class="popup" id="1500popup">
 			<div class="header">
-				<div class="headerTitle"><h3>Header title</h3></div>
-				<div class="closePopupBtn" onclick="closePopup()">X</div>
+				<div class="headerTitle"><h3>Chicago homes above 1,500 sq ft</h3></div>
+				<div class="closePopupBtn" onclick="closePopup1500()">X</div>
 			</div>
 			<div class="content">
-				<iframe src="https://www.sendsonar.com/use-cases.html" frameborder="0" width="100%" height="458px"></iframe>
+				<!-- <iframe src="real-estate.PNG" frameborder="0" width="100%" height="458px"></iframe> -->
+				<img src="real-estate.PNG" alt="" width="100%">
+			</div>
+		</div>
+		<div class="popup" id="divisionpopup">
+			<div class="header">
+				<div class="headerTitle"><h3>Home at 1648 W Division St #605</h3></div>
+				<div class="closePopupBtn" onclick="closeDivision()">X</div>
+			</div>
+			<div class="content">
+				<!-- <iframe src="real-estate.PNG" frameborder="0" width="100%" height="458px"></iframe> -->
+				<img src="division.PNG" alt="" width="100%">
 			</div>
 		</div>
 		<div class="circle-wave" id="wave">
@@ -64,7 +75,15 @@
 				<h3>Suggestion</h3>
 				<a href="https://www.sendsonar.com/compliance.html" target=_blank>Compliance</a>
 			</div>
-			<div class="meeting" id="mtg" onclick="closeCompliance()">
+			<div class="notification" id="1500" onclick="open1500()">
+				<h3>Suggestion</h3>
+				<a>Chicago homes above 1,500 sq ft</a>
+			</div>
+			<div class="notification" id="division" onclick="openDivision()">
+				<h3>Suggestion</h3>
+				<a>Home at 1648 W Division St #605</a>
+			</div>
+			<div class="meeting" id="mtg">
 				<h3>Meeting scheduled!</h3>
 				<a href="https://www.sendsonar.com/compliance.html" target=_blank>Thurs October 15, 2020 at 1:00pm</a>
 			</div>

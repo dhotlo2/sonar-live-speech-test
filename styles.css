@@ -77,6 +77,11 @@ h3 {
 	display: none;
 }
 
+#divisionpopup {
+  width: 725px !important;
+  left: 350px !important;
+}
+
 .live {
 	margin: 10px;
 	background: #4E4D4B;
@@ -124,7 +129,7 @@ h3 {
 .popup {
   display: none;
   position: absolute;
-  left: 500px;
+  left: 550px;
   top: 150px;
   width: 500px;
   height: 500px;
@@ -151,6 +156,8 @@ h3 {
 
 .content {
   width: 100%;
+  overflow: auto;
+  max-height: 458px;
 }
 
 #progressCall {

@@ -144,6 +144,20 @@ function speechSystem(){
       meetingThursday();
   }
 
+  if (
+    document.getElementById('result').innerHTML.indexOf('square feet') != -1){
+      document.getElementById('1500').style.display = 'block'; 
+  }
+
+  if (
+    document.getElementById('result').innerHTML.indexOf('division') != -1){
+      document.getElementById('division').style.display = 'block'; 
+  }
+  if (
+    document.getElementById('result').innerHTML.indexOf('Division') != -1){
+      document.getElementById('division').style.display = 'block'; 
+  }
+
 }
 
 
