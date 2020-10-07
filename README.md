@@ -27,6 +27,7 @@ Keywords:
 Example script:
 
 Customer: "I'm looking for a home in Chicago above 1,500 square feet"
+
 (Notification for homes above 1500 sq ft in chicago)
 
 Agent: "Looks like there is a nice one a little under $850,000 that is 3 bedroom 3 bath"
@@ -34,4 +35,5 @@ Agent: "Looks like there is a nice one a little under $850,000 that is 3 bedroom
 Customer: "Where is it located"
 
 Agent: "1648 W Division St apartment 605"
+
 (Notification for home at 1648 W Division St #605)
