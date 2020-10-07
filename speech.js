@@ -6,6 +6,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const rec = document.getElementById("recording");
   const trans = document.getElementById("transcription");
   const callbtn = document.getElementById("customerCallButton");
+  const y = document.getElementById("mtg");
+  var meetCounter = 0;
   let listening = false;
   const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -23,11 +25,11 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     const start = () => {
+      recognition.start();
       result.classList.add("speaking");
       result.style.borderTop = '1px solid grey';
       result.style.margin = '0 15px';
       trans.style.display = 'block';
-      recognition.start();
       button.style.border = "2px solid #f22f46";
       button.style.backgroundImage = 'url(phonered.svg)'
       v.style.display = 'none';
@@ -74,11 +76,6 @@ window.addEventListener("DOMContentLoaded", () => {
       listening ? stop() : start();
       listening = !listening;
     });
-  } else {
-    button.remove();
-    const message = document.getElementById("message");
-    message.removeAttribute("hidden");
-    message.setAttribute("aria-hidden", "false");
   }
 
 });
@@ -141,6 +138,12 @@ function speechSystem(){
     document.getElementById('result').innerHTML.indexOf('show me the weather') != -1){
       openWeather();
   }
+  
+  if (
+    document.getElementById('result').innerHTML.indexOf('next Thursday') != -1){
+      meetingThursday();
+  }
+
 }
 
 
@@ -231,3 +234,29 @@ var openWeather = (function() {
         }
     };
 })();
+
+var meetingThursday = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            document.getElementById("mtg").style.display = 'block';
+            var x =  setTimeout(function(){
+              document.getElementById("mtg").style.display = 'none';
+            }, 5000);
+        }
+    };
+})();
+
+// var meetingThursday = (function() {
+//     var done = false;
+//     return function(){
+//       if (!done) {
+//         done = true;
+//         document.getElementById("mtg").style.display = 'block';
+//         var x =  setTimeout(function(){
+//           document.getElementById("mtg").style.display = 'none';
+//         }, 5000);
+//       }
+//     };
+// });

@@ -4,7 +4,7 @@
 
 * {
 	margin: 0;
-	font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
@@ -15,9 +15,16 @@ body {
 a {
 	color: #23C6A3;
 	text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
 }
 h3 {
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .wrapper {
@@ -46,6 +53,24 @@ h3 {
 	background-size: 60px;
 	background-position: 90%;
 	background-repeat: no-repeat;
+  animation: ease-in;
+}
+
+.meeting {
+  display: none;
+  background: #002342;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  right: 0px;
+  margin: 10px;
+  transition: 0.3s;
+  background-image: url(blur.png);
+  background-size: 60px;
+  background-position: 90%;
+  background-repeat: no-repeat;
 }
 
 #usecases {
@@ -94,6 +119,38 @@ h3 {
   left: 558px;
   top: 12px;
   cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  left: 500px;
+  top: 150px;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 2px 15px 8px #0000002e;
+  border-radius: 5px;
+  background: white;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.headerTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.closePopupBtn {
+  text-align: right;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
 }
 
 #progressCall {

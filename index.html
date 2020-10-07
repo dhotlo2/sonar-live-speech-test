@@ -4,15 +4,23 @@
 	<meta charset="UTF-8">
 	<title>
 	</title>
-
 	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<script src="ai.js"></script>
 	<script src="speech.js"></script>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="callbtn" id="customerCallButton" onclick="showLive()"></div>
-
+		<div class="popup" id="kitchen">
+			<div class="header">
+				<div class="headerTitle"><h3>Header title</h3></div>
+				<div class="closePopupBtn" onclick="closePopup()">X</div>
+			</div>
+			<div class="content">
+				<iframe src="https://www.sendsonar.com/use-cases.html" frameborder="0" width="100%" height="458px"></iframe>
+			</div>
+		</div>
 		<div class="circle-wave" id="wave">
 		  <svg width="45" height="25">
 		    <defs>
@@ -55,6 +63,10 @@
 			<div class="notification" id="compliance" onclick="closeCompliance()">
 				<h3>Suggestion</h3>
 				<a href="https://www.sendsonar.com/compliance.html" target=_blank>Compliance</a>
+			</div>
+			<div class="meeting" id="mtg" onclick="closeCompliance()">
+				<h3>Meeting scheduled!</h3>
+				<a href="https://www.sendsonar.com/compliance.html" target=_blank>Thurs October 15, 2020 at 1:00pm</a>
 			</div>
 		</div>
 	</div>

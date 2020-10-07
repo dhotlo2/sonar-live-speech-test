@@ -1,4 +1,5 @@
 function closeUsecases() {
+	document.getElementById("kitchen").style.display = 'block';
 	document.getElementById("usecases").style.position = 'absolute';
 	document.getElementById("usecases").style.right = '-500px';
 }
@@ -15,4 +16,8 @@ function closeCompliance() {
 
 function showLive() {
 	document.getElementById("livecall").style.display = 'block';
+}
+
+function closePopup() {
+	document.getElementById("kitchen").style.display = 'none';
 }
