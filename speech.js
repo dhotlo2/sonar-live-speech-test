@@ -232,7 +232,7 @@ var openEmail = (function() {
     return function() {
         if (!executed) {
             executed = true;
-            var win = window.open('https://mail.google.com/mail/u/3/?tab=wm&ogbl#inbox?compose=GTvVlcSBnpwckdjtvWJNvGsdfXhTGssdjpnkBxWPRdLQWScXJJTftlmBMtRqZHGPvzCFCKlvKkVKh', '_blank');
+            var win = window.open('https://mail.google.com/mail/u/3/?tab=wm&ogbl#starred?compose=CllgCKCHTlwZWgPCMkDWXgkLDcFlPMJfNMqTpxWrmnGLPHQthzsSsgTsPDvbcFPFgNXPDQRCkGq', '_blank');
        win.focus();
         }
     };
