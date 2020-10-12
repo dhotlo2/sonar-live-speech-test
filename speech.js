@@ -199,8 +199,8 @@ var openAccount = (function() {
     return function() {
         if (!executed) {
             executed = true;
-            var win = window.open('https://staging-dashboard.sendsonar.com/?modal=AccountSettings', '_blank');
-       win.focus();
+            var iframe = document.getElementById('sonarframe');
+            iframe.src = 'https://staging-dashboard.sendsonar.com/?modal=AccountSettings';
         }
     };
 })();

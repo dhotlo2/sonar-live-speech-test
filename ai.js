@@ -35,3 +35,26 @@ function openDivision() {
 	document.getElementById("division").style.position = 'absolute';
 	document.getElementById("division").style.right = '-500px';
 }
+
+// function addCallBtn() {
+// 	var array = document.getElementsByClassName("customer-name");
+// 	var lastItem = array.slice(-1);
+// 	var newElement = document.createElement("div");
+// 	newElement.setAttribute('class', 'callbtn');
+// 	newElement.setAttribute('id', 'customerCallButton');
+// 	newElement.setAttribute('onClick', 'showLive()');
+// 	lastItem.appendChild(newElement);
+// }
+
+// setInterval(function(){
+// 	var iframe = document.getElementById('sonarframe');
+// 	var innerDoc = iframe.contentDocument || iframe.contentWindow;
+// 	var allItems = innerDoc.document.getElementsByClassName("customer-name");
+// 	var lastItem = allItems[allItems.length - 1];
+// 	console.log(iframe.innerhHTML);
+// 	var newElement = document.createElement("div");
+// 	newElement.setAttribute('class', 'callbtn');
+// 	newElement.setAttribute('id', 'customerCallButton');
+// 	newElement.setAttribute('onClick', 'showLive()');
+// 	lastItem.appendChild(newElement);
+// }, 1000);

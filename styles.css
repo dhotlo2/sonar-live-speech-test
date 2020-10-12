@@ -27,11 +27,20 @@ h3 {
   font-style: normal;
 }
 
+.framer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .wrapper {
-	background-image: url(bg.png);
-	background-size: cover;
+/*	background-image: url(bg.png);
+	background-size: cover;*/
 	height: 100%;
-  max-width: 1440px;
+  width: 100%;
+/*  max-width: 1440px;*/
 }
 
 #voip {
