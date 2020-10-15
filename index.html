@@ -14,24 +14,59 @@
 	</iframe>
 	<div class="wrapper">
 	<div class="callbtn" id="customerCallButton" onclick="showLive()"></div>
-		<div class="popup" id="1500popup">
+		<div class="popup" id="inventory" style="z-index: 5;">
 			<div class="header">
-				<div class="headerTitle"><h3>Chicago homes above 1,500 sq ft</h3></div>
-				<div class="closePopupBtn" onclick="closePopup1500()">X</div>
+				<div class="headerTitle"><h3>Inventory - SUVs new</h3></div>
+				<div class="closePopupBtn" onclick="closePopup1500()"></div>
 			</div>
 			<div class="content">
 				<!-- <iframe src="real-estate.PNG" frameborder="0" width="100%" height="458px"></iframe> -->
-				<img src="real-estate.png" alt="" width="100%">
+				<img src="suvs.png" alt="" width="100%">
 			</div>
 		</div>
+
 		<div class="popup" id="divisionpopup">
 			<div class="header">
-				<div class="headerTitle"><h3>Home at 1648 W Division St #605</h3></div>
+				<div class="headerTitle"><h3>Inventory - SUVs new</h3></div>
 				<div class="closePopupBtn" onclick="closeDivision()">X</div>
 			</div>
 			<div class="content">
 				<!-- <iframe src="real-estate.PNG" frameborder="0" width="100%" height="458px"></iframe> -->
 				<img src="division.png" alt="" width="100%">
+			</div>
+		</div>
+
+		<div class="popup" id="introPopup">
+			<div class="header">
+				<div class="headerTitle"><h3>Intro Script</h3></div>
+				<div class="closePopupBtn" onclick="closeIntro()"></div>
+			</div>
+			<div class="content">
+				<!-- <iframe src="real-estate.PNG" frameborder="0" width="100%" height="458px"></iframe> -->
+				<p style="padding: 25px; color: darkgrey; border-bottom: 1px solid #afafaf; margin-bottom: 15px" id="introContent">Hello here! My name is Ryan from Horowitz Auto Dealership. You had texted us earlier saying you wanted to make an appointment, are you a current owner looking for service or are you interested in buying a new car?</p>
+				<ul style="color: darkgrey; padding: 0px;">
+					<li id="pointOne" class="scriptItems">
+						<div class="checkmark-circle" id="checkOne">
+						  <div class="background"></div>
+						  <div class="checkmark draw"></div>
+						</div>New car inventory
+					</li>
+					<li id="pointTwo" class="scriptItems">
+						<div class="checkmark-circle" id="checkTwo">
+						  <div class="background"></div>
+						  <div class="checkmark draw"></div>
+						</div>Current sales - Interest free financing for 2 years
+					</li>
+					<li id="pointThree" class="scriptItems">
+						<div class="checkmark-circle" id="checkThree">
+						  <div class="background"></div>
+						  <div class="checkmark draw"></div>
+						</div>What car is the customer interested in?
+					</li>
+				</ul>
+			</div>
+			<div class="performance">
+				<p id="pscore">Performance score: </p>
 			</div>
 		</div>
 		<div class="circle-wave" id="wave">
@@ -57,7 +92,7 @@
 				<div class="btnholder">
 					<button id="button"></button>
 					<div class="">
-						<h3>Rebecca Yang</h3>
+						<h3>Sarah Jane</h3>
 						<p id="voip">Using: VOIP</p>
 						<div id="recording">0:00:00</div>
 					</div>
@@ -65,29 +100,36 @@
 				<div id="transcription">LIVE TRANSCRIPTION</div>
 				<div id="result"></div>
 			</div>
-			<div class="notification" id="usecases" onclick="closeUsecases()">
+			<div class="notification" id="introscript" onclick="openIntroScript()">
 				<h3>Suggestion</h3>
-				<a href="https://www.sendsonar.com/use-cases.html" target=_blank>Use cases page</a>
+				<a>Intro script</a>
 			</div>
-			<div class="notification" id="salesforce" onclick="closeSalesforce()">
+			<div class="notification interest" id="usecases" onclick="closeUsecases()">
+				<h3>Customer interest updated</h3>
+				<a style="color: #b5b5b5; text-decoration: none;">SUV - new</a>
+			</div>
+<!-- 			<div class="notification" id="salesforce" onclick="closeSalesforce()">
 				<h3>Suggestion</h3>
 				<a href="https://www.sendsonar.com/salesforce.html" target=_blank>Salesforce Integration</a>
-			</div>
-			<div class="notification" id="compliance" onclick="closeCompliance()">
+			</div> -->
+<!-- 			<div class="notification" id="compliance" onclick="closeCompliance()">
 				<h3>Suggestion</h3>
 				<a href="https://www.sendsonar.com/compliance.html" target=_blank>Compliance</a>
-			</div>
+			</div> -->
 			<div class="notification" id="1500" onclick="open1500()">
 				<h3>Suggestion</h3>
-				<a>Chicago homes above 1,500 sq ft</a>
+				<a>Inventory - SUV</a>
 			</div>
-			<div class="notification" id="division" onclick="openDivision()">
-				<h3>Suggestion</h3>
-				<a>Home at 1648 W Division St #605</a>
+			<div class="notification interest" id="division" onclick="openDivision()">
+				<h3>Customer interest updated</h3>
+				<a style="color: #b5b5b5; text-decoration: none;">SUV - mid size</a>
 			</div>
 			<div class="meeting" id="mtg">
-				<h3>Meeting scheduled!</h3>
-				<a href="https://www.sendsonar.com/compliance.html" target=_blank>Thurs October 15, 2020 at 1:00pm</a>
+				<h3>Meeting scheduled - Sarah Jane</h3>
+				<div style="display: flex;">
+					<a id="date"></a>
+					<a>&nbsp;at 11:00 AM</a>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -65,6 +65,10 @@ h3 {
   animation: ease-in;
 }
 
+.interest {
+  background: #2c4624 !important;
+}
+
 .meeting {
   display: none;
   background: #002342;
@@ -76,7 +80,6 @@ h3 {
   right: 0px;
   margin: 10px;
   transition: 0.3s;
-  background-image: url(blur.png);
   background-size: 60px;
   background-position: 90%;
   background-repeat: no-repeat;
@@ -126,31 +129,45 @@ h3 {
 	background-image: url(phone.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	border-radius: 15px;
-	width: 25px;
-	height: 25px;
+  background-color: white;
+	border-radius: 20px;
+	width: 35px;
+	height: 35px;
 	position: absolute;
-  left: 558px;
-  top: 12px;
+  right: 20px;
+  top: 8px;
   cursor: pointer;
+}
+
+.callbtn:hover {
+  box-shadow: 0px 2px 9px 0px #afafaf;
+}
+
+#inventory {
+  width: 600px;
+  height: 400px
+  left: 30%;
 }
 
 .popup {
   display: none;
   position: absolute;
-  left: 550px;
+  left: 35%;
   top: 150px;
   width: 500px;
   height: 500px;
   box-shadow: 0 2px 15px 8px #0000002e;
   border-radius: 5px;
-  background: white;
+  background: #fafafa;
 }
 .header {
   display: flex;
   flex-direction: row;
   padding: 10px;
   border-bottom: 1px solid #e2e2e2;
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .headerTitle {
@@ -161,12 +178,27 @@ h3 {
 .closePopupBtn {
   text-align: right;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background-image: url(xicon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .content {
-  width: 100%;
   overflow: auto;
   max-height: 458px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  background: #fafafa;
+}
+
+.performance {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  color: #828282;
 }
 
 #progressCall {
@@ -295,7 +327,7 @@ footer {
 
 .circle-wave {
   top: 700px;
-  left: 667px;
+  left: 46%;
   width: 180px;
   height: 25px;
   border-radius: 15px;
@@ -321,5 +353,102 @@ footer {
 
 .circle-wave p {
   font-weight: 500;
+}
+
+.scriptItems {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#checkOne {
+  display: none;
+}
+#checkTwo {
+  display: none;
+}
+#checkThree {
+  display: none;
+}
+
+
+.checkmark-circle {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.checkmark-circle .background {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2EB150;
+  position: absolute;
+}
+.checkmark-circle .checkmark {
+  border-radius: 5px;
+}
+.checkmark-circle .checkmark.draw:after {
+  -webkit-animation-delay: 200ms;
+  -moz-animation-delay: 200ms;
+  animation-delay: 200ms;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: checkmark;
+  -moz-animation-name: checkmark;
+  animation-name: checkmark;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.checkmark-circle .checkmark:after {
+  opacity: 0.1;
+  height: 20px;
+  width: 5px;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  border-radius: 1px !important;
+  content: '';
+  left: 4px;
+  top: 13px;
+  position: absolute;
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  20% {
+    height: 0;
+    width: 5px;
+    opacity: 1;
+  }
+  40% {
+    height: 12px;
+    width: 5px;
+    opacity: 1;
+  }
+  100% {
+    height: 12px;
+    width: 5px;
+    opacity: 1;
+  }
 }
 

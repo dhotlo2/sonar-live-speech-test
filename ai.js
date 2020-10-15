@@ -18,22 +18,32 @@ function showLive() {
 }
 
 function closePopup1500() {
-	document.getElementById("1500popup").style.display = 'none';
+	document.getElementById("inventory").style.display = 'none';
+}
+function closeIntro() {
+	document.getElementById("introPopup").style.display = 'none';
 }
 function closeDivision() {
 	document.getElementById("divisionpopup").style.display = 'none';
 }
 
 function open1500() {
-	document.getElementById("1500popup").style.display = 'block';
+	document.getElementById("inventory").style.display = 'block';
 	document.getElementById("1500").style.position = 'absolute';
 	document.getElementById("1500").style.right = '-500px';
 }
 
 function openDivision() {
-	document.getElementById("divisionpopup").style.display = 'block';
+	// document.getElementById("divisionpopup").style.display = 'block';
 	document.getElementById("division").style.position = 'absolute';
 	document.getElementById("division").style.right = '-500px';
+}
+
+function openIntroScript() {
+	document.getElementById("introPopup").style.display = 'block';
+	document.getElementById("introscript").style.position = 'absolute';
+	document.getElementById("introscript").style.right = '-500px';
+	startIntro();
 }
 
 // function addCallBtn() {

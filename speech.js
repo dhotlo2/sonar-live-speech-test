@@ -84,7 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function speechSystem(){
   console.log("AI Speech function called");
   if (
-    document.getElementById('result').innerHTML.indexOf('use cases') != -1){
+    document.getElementById('result').innerHTML.indexOf('new SUV') != -1){
       document.getElementById('usecases').style.display = 'block';  
   }
   if (
@@ -138,24 +138,28 @@ function speechSystem(){
     document.getElementById('result').innerHTML.indexOf('show me the weather') != -1){
       openWeather();
   }
-  
+  // AUTO DEMO STUFF
   if (
-    document.getElementById('result').innerHTML.indexOf('next Thursday') != -1){
+    document.getElementById('result').innerHTML.indexOf('Sarah Jane') != -1){
       meetingThursday();
   }
 
   if (
-    document.getElementById('result').innerHTML.indexOf('square feet') != -1){
+    document.getElementById('result').innerHTML.indexOf('our inventory') != -1){
       document.getElementById('1500').style.display = 'block'; 
   }
 
   if (
-    document.getElementById('result').innerHTML.indexOf('division') != -1){
+    document.getElementById('result').innerHTML.indexOf('midsize') != -1){
       document.getElementById('division').style.display = 'block'; 
   }
+  // if (
+  //   document.getElementById('result').innerHTML.indexOf('Division') != -1){
+  //     document.getElementById('division').style.display = 'block'; 
+  // }
   if (
-    document.getElementById('result').innerHTML.indexOf('Division') != -1){
-      document.getElementById('division').style.display = 'block'; 
+    document.getElementById('result').innerHTML.indexOf('intro script') != -1){
+      document.getElementById('introscript').style.display = 'block'; 
   }
 
 }
@@ -253,8 +257,16 @@ var meetingThursday = (function() {
     var executed = false;
     return function() {
         if (!executed) {
+
             executed = true;
             document.getElementById("mtg").style.display = 'block';
+
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate() + 1;
+            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;    
+
             var x =  setTimeout(function(){
               document.getElementById("mtg").style.display = 'none';
             }, 5000);
@@ -262,6 +274,72 @@ var meetingThursday = (function() {
     };
 })();
 
+var performanceScore = 0;
+
+function startIntro() {
+  console.log("intro started!");
+  var scoreElement = document.getElementById('pscore');
+  var execOne = false;
+  var execTwo = false;
+  var execThree = false;
+  var execFour = false;
+  var curse = false;
+  var counterThing =  setInterval(function(){
+    if (
+        document.getElementById('result').innerHTML.indexOf('buying') != -1){
+          document.getElementById('introContent').style.color = 'black'; 
+          if (!execOne) {
+            execOne = true;
+            performanceScore += 25;
+            scoreElement.innerHTML = 'Performance score: ' + performanceScore + '%';
+            console.log('performance score :' + performanceScore);
+          }
+      }
+    if (
+        document.getElementById('result').innerHTML.indexOf('new SUVs') != -1){
+          document.getElementById('pointOne').style.color = 'black';
+          document.getElementById('checkOne').style.display = 'block'; 
+          if (!execTwo) {
+            execTwo = true;
+            performanceScore += 25;
+            scoreElement.innerHTML = 'Performance score: ' + performanceScore + '%';
+            console.log('performance score :' + performanceScore);
+          }
+      }
+    if (
+        document.getElementById('result').innerHTML.indexOf('sale') != -1){
+          document.getElementById('pointTwo').style.color = 'black';
+          document.getElementById('checkTwo').style.display = 'block'; 
+          if (!execThree) {
+            execThree = true;
+            performanceScore += 25;
+            scoreElement.innerHTML = 'Performance score: ' + performanceScore + '%';
+            console.log('performance score :' + performanceScore);
+          }
+      }
+    if (
+        document.getElementById('result').innerHTML.indexOf('new SUV') != -1){
+          document.getElementById('pointThree').style.color = 'black';
+          document.getElementById('checkThree').style.display = 'block'; 
+          if (!execFour) {
+            execFour = true;
+            performanceScore += 25;
+            scoreElement.innerHTML = 'Performance score: ' + performanceScore + '%';
+            console.log('performance score :' + performanceScore);
+          }
+      }
+    if (
+      document.getElementById('result').innerHTML.indexOf('***') != -1){
+        if (!curse) {
+          curse = true;
+          performanceScore -= 10;
+          scoreElement.innerHTML = 'Performance score: ' + performanceScore + '%';
+          console.log('performance score :' + performanceScore);
+        }
+    }
+
+    }, 500);
+}
 // var meetingThursday = (function() {
 //     var done = false;
 //     return function(){
