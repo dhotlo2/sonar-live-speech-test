@@ -36,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
       rec.style.display = 'block';
       wave.style.display = 'flex';
       callbtn.style.filter = 'grayscale(1)';
+      document.getElementById('introscript').style.display = 'block'; 
       
       // Counter for call time
       var sec = 0;
@@ -152,15 +153,17 @@ function speechSystem(){
   if (
     document.getElementById('result').innerHTML.indexOf('midsize') != -1){
       document.getElementById('division').style.display = 'block'; 
+      document.getElementById('carinterest').innerHTML = 'SUV - new - mid size';
+      document.getElementById('c-interest').style.borderLeft = '3px solid #4CAF50';
   }
   // if (
   //   document.getElementById('result').innerHTML.indexOf('Division') != -1){
   //     document.getElementById('division').style.display = 'block'; 
   // }
-  if (
-    document.getElementById('result').innerHTML.indexOf('intro script') != -1){
-      document.getElementById('introscript').style.display = 'block'; 
-  }
+  // if (
+  //   document.getElementById('result').innerHTML.indexOf('intro script') != -1){
+  //     document.getElementById('introscript').style.display = 'block'; 
+  // }
 
 }
 
@@ -325,6 +328,8 @@ function startIntro() {
             execFour = true;
             performanceScore += 25;
             scoreElement.innerHTML = 'Performance score: ' + performanceScore + '%';
+            document.getElementById('carinterest').innerHTML = 'SUV - new';
+            document.getElementById('c-interest').style.borderLeft = '3px solid #4CAF50';
             console.log('performance score :' + performanceScore);
           }
       }
