@@ -165,7 +165,25 @@ h3 {
 } 
 
 #c-interest {
-    border-left: 3px solid grey;
+  border-left: 3px solid grey;
+}
+
+.textBtnHolder {
+  display: flex;
+  justify-content: center;
+}
+
+.viaTextBtn {
+  background: #4D5FF6;
+  padding: 9px 15px;
+  color: white;
+  width: 200px;
+  text-align: center;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .popup {
