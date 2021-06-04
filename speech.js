@@ -1,3 +1,20 @@
+const net = new brain.recurrent.LSTM();
+
+net.train([
+  { input: ["I do not like you"], output: ["Sales rescue"] },
+  { input: ["Maybe but not right now"], output: ["Sales rescue"] },
+  { input: ["I do not think so"], output: ["Sales rescue"] },
+  { input: ["Maybe but not right now"], output: ["Sales rescue"] },
+  { input: ["Maybe not sure"], output: ["Sales rescue"] },
+  { input: ["not right now"], output: ["Sales rescue"] },
+  { input: ["some other time"], output: ["Sales rescue"] }, 
+  { input: ["another time"], output: ["Sales rescue"] },
+  { input: ["I will call you back"], output: ["Customer callback"] },
+  { input: ["call you back"], output: ["Customer callback"] },
+  { input: ["call back"], output: ["Customer callback"] },
+  { input: ["call"], output: ["Customer callback"] },
+]);
+
 window.addEventListener("DOMContentLoaded", () => {
   const wave = document.getElementById("wave");
   const button = document.getElementById("button");
@@ -22,6 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
       rec.style.display = 'none';
       wave.style.display = 'none';
       callbtn.style.filter = 'none';
+      neural();
     };
 
     const start = () => {
@@ -81,6 +99,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function neural() {
+  console.log("inside neural function")
+  var x = document.getElementsByClassName("final");
+  for (var i = 0; i < x.length; i++) {
+    var all = x[i].innerText;
+    console.log("this is all" + all);
+    const output = net.run([all]); 
+    console.log (output);
+    var tag = document.getElementById('msg-tag');
+    tag.style.display = 'block';
+    tag.innerHTML = output.toString();
+  }
+}
 
 function speechSystem(){
   console.log("AI Speech function called");

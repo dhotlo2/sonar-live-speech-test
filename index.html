@@ -6,13 +6,16 @@
 	</title>
 	<link rel="stylesheet" href="styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<script src="//unpkg.com/brain.js"></script>
 	<script src="ai.js"></script>
 	<script src="speech.js"></script>
+	<script src="ml.js"></script>
 </head>
 <body>
 	<iframe src="https://staging-dashboard.sendsonar.com/" frameborder="0" class="framer" id="sonarframe">
 	</iframe>
 	<div class="wrapper">
+	<div id="msg-tag">Test</div>
 	<div class="callbtn" id="customerCallButton" onclick="showLive()"></div>
 		<div class="popup" id="inventory" style="z-index: 5;">
 			<div class="header">

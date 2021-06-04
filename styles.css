@@ -173,6 +173,18 @@ h3 {
   justify-content: center;
 }
 
+#msg-tag {
+  display: none;
+  padding: 2px 13px;
+  font-size: 12px;
+  background: #ECECEC;
+  color: #ED5D1E;
+  border-radius: 3px;
+  position: absolute;
+  left: 49px;
+  top: 264px;
+}
+
 .viaTextBtn {
   background: #4D5FF6;
   padding: 9px 15px;
